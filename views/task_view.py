@@ -1,13 +1,10 @@
 class TaskView:
-    """Handles displaying information to the user."""
+    """Handles formatting of responses."""
 
     def display_tasks(self, tasks):
-        if not tasks:
-            print("No tasks found.")
-            return
-        for i, task in enumerate(tasks):
-            status = "[x]" if task.get("completed") else "[ ]"
-            print(f"{i + 1}. {status} {task.get('description')}")
+        """Return the list of tasks to the client."""
+        return tasks
 
     def display_message(self, message):
-        print(message)
+        """Return a simple message to the client."""
+        return {"message": message}
